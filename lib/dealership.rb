@@ -11,8 +11,24 @@ class Vehicle
     @@vehicles
   end
 
+  define_singleton_method(:clear) do
+    @@vehicles = []
+  end
+
   define_method(:save) do
     @@vehicles.push(self)
+  end
+
+  define_method(:make) do
+    @make
+  end
+
+  define_method(:model) do
+    @model
+  end
+
+  define_method(:year) do
+    @year
   end
 
 end

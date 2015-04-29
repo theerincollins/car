@@ -50,6 +50,34 @@ describe(Vehicle) do
     end
   end
 
+  describe('#age') do
+    it('saves the age of a vehicle') do
+      test_vehicle = Vehicle.new("Honda", "Element", 2006)
+      expect(test_vehicle.age()).to(eq(9))
+    end
+  end
+
+  describe('#american?') do
+    it('returns whether or not vehicle is american-made') do
+      test_vehicle = Vehicle.new("Chrysler", "LeBaron", 1990)
+      expect(test_vehicle.american?()).to(eq(true))
+    end
+  end
+
+  describe('#worth_buying') do
+    it('returns whether a car is worth buying') do
+      test_vehicle = Vehicle.new("Dodge", "Neon", 1999)
+      expect(test_vehicle.worth_buying?()).to(eq(false))
+    end
+  end
+
+  describe('#id') do
+    it('assigns each vehicle a unique id') do
+      test_vehicle = Vehicle.new("Dodge", "Neon", 1999)
+      expect(test_vehicle.id()).to(eq(1))
+    end
+  end
+
 
 
 end

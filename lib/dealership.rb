@@ -5,6 +5,7 @@ class Vehicle
     @make = make
     @model = model
     @year = year
+    @id = @@vehicles.length().+(1)
   end
 
   define_singleton_method(:all) do
@@ -31,4 +32,20 @@ class Vehicle
     @year
   end
 
+  define_method(:age) do
+    @age = Time.new().year() - @year
+  end
+
+  define_method(:american?) do
+    american_vehicles = ["Chevy", "Chrysler", "Ford", "Dodge"]
+    american_vehicles.include?(@make)
+  end
+
+  define_method(:worth_buying?) do
+    self.american?().!() && self.age <= 15
+  end
+
+  define_method(:id) do
+    @id
+  end
 end

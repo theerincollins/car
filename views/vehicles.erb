@@ -1,0 +1,7 @@
+<h1>Vehicles for Sale</h1>
+
+<ul>
+  <% @vehicles.each() do |vehicle| %>
+  <li><a href="/vehicles/<% vehicle.id() %>"> <%= vehicle.model() %></a></li>
+  <% end %>
+</ul>

@@ -52,12 +52,12 @@ class Vehicle
   define_singleton_method(:find) do |identification|
     found_vehicle = nil
     @@vehicles.each do |vehicle|
-      if vehicle.id() == identification
+      if vehicle.id().eql?(identification)
         found_vehicle = vehicle
       end
     end
     found_vehicle
   end
 
-  
+
 end

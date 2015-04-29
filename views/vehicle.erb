@@ -1,8 +1,17 @@
-<h1><%= @vehicle.model() %></h1>
-<h1><%= @vehicle.make() %></h1>
+<h1>Here is that Vehicle's Deets</h1>
 
-<h1><%= @vehicle.year() %></h1>
 
-test test
+  <p><%= @vehicle.make() %></p>
+  <p><%= @vehicle.model() %></p>
+  <p><%= @vehicle.year() %></p>
+
+
+<% if @vehicle.worth_buying?() %>
+<p>You should buy this car because it is not American and not super old</p>
+<% else %>
+<p>Don't buy this car! It is either American made or super old.</p>
+<% end %>
+
+
 
 <a href="/">Home</a>

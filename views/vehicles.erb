@@ -2,6 +2,6 @@
 
 <ul>
   <% @vehicles.each() do |vehicle| %>
-  <li><a href="/vehicles/<% vehicle.id() %>"> <%= vehicle.model() %></a></li>
+  <li><a href="/vehicles/<%= vehicle.id() %>"> <%= vehicle.model() %></a></li>
   <% end %>
 </ul>

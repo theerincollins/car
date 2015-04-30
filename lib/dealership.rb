@@ -33,7 +33,7 @@ class Vehicle
   end
 
   define_method(:age) do
-    @age = Time.new().year() - @year
+    @age = Time.new().year() - @year.to_i
   end
 
   define_method(:american?) do
